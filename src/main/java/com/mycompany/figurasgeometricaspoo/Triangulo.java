@@ -4,8 +4,11 @@ public class Triangulo extends FiguraGeometrica {
     private double lado1; 
     private double lado2; 
     
-    public Triangulo(String nombre, String color) {
+    public Triangulo(String nombre, String color, double lado1, double lado2) {
         super(nombre, color);
+        this.lado1 = lado1; 
+        this.lado2 = lado2; 
+        
     }
     
      
@@ -13,18 +16,19 @@ public class Triangulo extends FiguraGeometrica {
     /**
      *
      */
-     public void obtenerArea(){
+     public double obtenerArea(){
          
-         base*altura/2
+         return this.lado2*this.lado1/2;
+        
      
      } 
      
     /**
      *
      */
-     public void obtenerPerimetro(){
+     public double obtenerPerimetro(){
         
-         P = a+b+c 
+         return this.lado1+this.lado2;
          
          
      }

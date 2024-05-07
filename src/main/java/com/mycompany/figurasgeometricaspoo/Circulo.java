@@ -1,41 +1,22 @@
 package com.mycompany.figurasgeometricaspoo;
-import  java.util.Scanner; 
+
 public class Circulo extends FiguraGeometrica {
     
     private double radio; 
    
-    public Circulo(String nombre, String color) {
+    public Circulo(String nombre, String color,double radio) {
         super(nombre, color);
+        this.radio = radio;
     }
-    
-    public void main (String[]args){
-    
-   Scanner sc = new Scanner (System.in); 
    
-    }
-    
-  
-    @Override
      public double obtenerArea(){
-     int pi = (int) 3.14;    
-     System.out.println("Ingrese el radio");
-     int radio = sc.nextInt();
-         System.out.println("El area es:"+pi*radio*2);
+     return Math.PI*radio*2;
      
      } 
-     
-    /**
-     *
-     * @return
-     */
-    @Override
+  
      public double obtenerPerimetro(){
+        return   2*Math.PI*radio;
          
-         int pi = (int) 3.14;
-         System.out.println("Ingrese el radio");
-         int radio = sc.nextInt();
-            System.out.println("El perimetro es: " + 2*pi*radio);
-                
      }
    
   }
